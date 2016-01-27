@@ -1,12 +1,47 @@
-*.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+import java.util.Scanner;
+public class triangle-print {
 
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+	  private static Scanner sc;
+	public static void main(String[] args) {
+		
+	  sc = new Scanner(System.in);
+      int a,b,c;
+      System.out.println("Enter size: ");
+      a=sc.nextInt();
+      b=a+a-1;
+      c=b-10;
+   
+        System.out.print("*");
+    for(int w=0;w<b-2;w++){
+	    System.out.print("-");  }
+        System.out.println("*");
+	
+    for(int t=0;t<a-2;t++){
+    for(int y=0;y<t+1;y++){ 
+	    System.out.print(" ");  }
+        System.out.print("\\ ");
+   
+        if(t==0){  
+    for(int r=0;r<b-6;r++){
+	    System.out.print("*"); }}
+  
+        else { 
+	        if(t<a-4){
+	    System.out.print("*");
+    for(int u=0;u<c;u++){
+        System.out.print(" "); }
+        c-=2;
+        System.out.print("*"); } 
+	   if(t==a-4){ System.out.print("*"); }}
+    if(t!=a-3)
+        System.out.println(" /");
+    else
+        System.out.println("/");  }
+	
+    for(int e=1;e<a;e++){ 
+	    System.out.print(" "); }
+	    System.out.print("*");
+	                           
+	 } 
+	}
