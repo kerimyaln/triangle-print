@@ -1,0 +1,47 @@
+/*Draw the triangle with alphabet */
+
+import java.io.IOException;
+import java.util.Scanner;
+public class alphabet_triangle {
+	
+private static Scanner sc;
+	public static void main(String[] args) throws IOException {
+		
+sc=new Scanner(System.in);
+int a,b,u=0;
+System.out.print("enter size:");
+a=sc.nextInt();
+b=a-1;
+for(int c=1;a>=c;c++){
+	char ch= 'A';
+	u=0;
+	for(int e=1;e<=b;e++){
+		System.out.print(" ");
+		u++;
+	} b--;
+	
+		for(int r=0;r<(a-u);r++){
+			if( ch >'Z'){
+				 ch ='A';}
+			System.out.print(ch);
+			 try{
+			     Thread.sleep(55);
+			     }catch(InterruptedException e){}
+		ch++;}
+		
+		ch-=2;
+		for(int y=1;y<(a-u);y++){
+			if( ch <'A')
+				 ch ='Z';
+			System.out.print(ch);
+			
+			try{
+			     Thread.sleep(15);
+			     }catch(InterruptedException e){}
+			
+			ch--;
+				     }
+		System.out.println();
+       } 
+    } 
+}
